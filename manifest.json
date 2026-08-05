@@ -1,0 +1,17 @@
+{
+    "name": "Calculadora Bohora",
+    "short_name": "Bohora",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0B5ED7",
+    "orientation": "portrait",
+
+    "icons": [
+        {
+            "src": "icone/icone.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
