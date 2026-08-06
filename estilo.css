@@ -1,91 +1,215 @@
-body {
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-    margin: 0;
-    background: #ffffff;
-    font-family: Arial, sans-serif;
+body{
+
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
 
 }
 
+.app{
 
-.app {
+    width:100%;
+    max-width:420px;
 
-    width: 90%;
-    max-width: 400px;
-    margin: auto;
-    text-align: center;
-    padding-top: 30px;
+    background:white;
 
-}
+    border-radius:18px;
 
+    padding:25px;
 
-h1 {
-
-    font-size: 32px;
-    color: #0B5ED7;
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
 
 }
 
+h1{
 
-label {
-
-    display: block;
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
+    text-align:center;
+    color:#222;
 
 }
 
+.subtitulo{
 
-input {
-
-    width: 80%;
-    padding: 15px;
-    font-size: 24px;
-    text-align: center;
-    margin-top: 10px;
-
-    border-radius: 10px;
-    border: 2px solid #ccc;
+    text-align:center;
+    color:#777;
+    margin-top:5px;
+    margin-bottom:25px;
+    font-size:15px;
 
 }
 
+/*=========================
+BOTÕES SUPERIORES
+==========================*/
 
-button {
+.botoes-modo{
 
-    margin-top: 30px;
-
-    width: 80%;
-    padding: 18px;
-
-    font-size: 24px;
-    font-weight: bold;
-
-    color: white;
-    background: #0B5ED7;
-
-    border: none;
-    border-radius: 15px;
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
 
 }
 
+.modo{
 
-#resultado {
+    flex:1;
 
-    margin-top: 35px;
+    padding:14px;
 
-    font-size: 32px;
-    font-weight: bold;
+    border:none;
 
-    color: green;
+    border-radius:10px;
+
+    background:#dcdcdc;
+
+    color:#333;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
 
 }
 
+.modo:hover{
 
-footer {
+    background:#cfcfcf;
 
-    margin-top: 60px;
+}
 
-    color: gray;
-    font-size: 14px;
+.modo.ativo{
+
+    background:#666;
+
+    color:white;
+
+}
+
+/*=========================
+LABELS
+==========================*/
+
+label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:6px;
+
+    font-weight:bold;
+
+    color:#333;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:17px;
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:#0077ff;
+
+}
+
+/*=========================
+BOTÃO CALCULAR
+==========================*/
+
+.calcular{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#0077ff;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.calcular:hover{
+
+    background:#005fd4;
+
+}
+
+/*=========================
+RESULTADO
+==========================*/
+
+.resultado{
+
+    margin-top:25px;
+
+    background:#f7f7f7;
+
+    border-left:5px solid #0077ff;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+    color:#222;
+
+    min-height:80px;
+
+}
+
+/*=========================
+RODAPÉ
+==========================*/
+
+footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:13px;
 
 }
