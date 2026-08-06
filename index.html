@@ -2,64 +2,115 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculadora de glaciamento</title>
+    <title>Calc Produção</title>
 
-<link rel="stylesheet" href="estilo.css">
-<link rel="manifest" href="manifest.json">
-
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
 
-<div class="app">
+    <div class="app">
 
-<h1>
-Calculadora<br>
-de glaciamento
-</h1>
+        <h1>Calc Produção</h1>
+        <p class="subtitulo">Glaciamento • Acréscimo Percentual</p>
 
+        <!-- Botões de seleção -->
+        <div class="botoes-modo">
 
-<label>Peso Inicial (kg)</label>
+            <button id="btnGlaciamento"
+                    class="modo ativo"
+                    onclick="mostrarGlaciamento()">
+                Glaciamento
+            </button>
 
-<input id="inicial" type="number" step="0.001">
+            <button id="btnAcrescimo"
+                    class="modo"
+                    onclick="mostrarAcrescimo()">
+                Acréscimo %
+            </button>
 
+        </div>
 
-<label>Peso Final (kg)</label>
+        <!-- ===================== -->
+        <!-- TELA GLACIAMENTO -->
+        <!-- ===================== -->
 
-<input id="final" type="number" step="0.001">
+        <div id="glaciamento">
 
+            <label for="inicial">Peso Inicial (kg)</label>
+            <input
+                id="inicial"
+                type="number"
+                step="0.001"
+                placeholder="Ex.: 10.000">
 
-<button onclick="calcular()">
-CALCULAR
-</button>
+            <label for="final">Peso Final (kg)</label>
+            <input
+                id="final"
+                type="number"
+                step="0.001"
+                placeholder="Ex.: 11.250">
 
+        </div>
 
-<div id="resultado">
+        <!-- ===================== -->
+        <!-- TELA ACRÉSCIMO -->
+        <!-- ===================== -->
 
-</div>
+        <div id="acrescimo" style="display:none;">
 
+            <label for="quantidade">Quantidade</label>
+            <input
+                id="quantidade"
+                type="number"
+                step="0.001"
+                placeholder="Ex.: 10.000">
 
-<footer>
-© 2026 Robson Bohora / Crissiane
-</footer>
+            <label for="percentual">Porcentagem (%)</label>
+            <input
+                id="percentual"
+                type="number"
+                step="0.01"
+                placeholder="Ex.: 12">
 
+        </div>
 
-</div>
+        <!-- Botão -->
 
-<script>
+        <button class="calcular" onclick="calcular()">
+            CALCULAR
+        </button>
 
-if ("serviceWorker" in navigator) {
+        <!-- Resultado -->
 
-    navigator.serviceWorker.register("service-worker.js");
+        <div id="resultado" class="resultado">
 
-}
+            Aguardando cálculo...
 
-</script>
+        </div>
 
-<script src="calculo.js"></script>
+        <footer>
+
+            Versão 2.0<br>
+            © 2026 Robson Bohora / Crissiane
+
+        </footer>
+
+    </div>
+
+    <script>
+
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+
+    </script>
+
+    <script src="calculo.js"></script>
 
 </body>
 
